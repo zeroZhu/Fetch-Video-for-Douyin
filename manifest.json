@@ -3,11 +3,15 @@
   "name": "Fetch Video for Douyin",
   "description": "fetch video in Douyin",
   "version": "1.0",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": "/static/logo.png"
   },
-  "permissions": {
-    
-  }
+  "permissions": [
+    "contextMenus"
+  ]
 }
