@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Fetch Video for Douyin",
+  "description": "fetch video in Douyin",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "/static/logo.png"
+  },
+  "permissions": {
+    
+  }
+}
