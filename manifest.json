@@ -9,9 +9,19 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "/static/logo.png"
+    "default_icon": {
+      "16": "/static/icon/icon-16.png",
+      "24": "/static/icon/icon-24.png",
+      "32": "/static/icon/icon-32.png",
+      "48": "/static/icon/icon-48.png",
+      "64": "/static/icon/icon-64.png",
+      "128": "/static/icon/icon-128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidePanel.html"
   },
   "permissions": [
-    "contextMenus"
+    "sidePanel", "contextMenus", "storage"
   ]
 }
