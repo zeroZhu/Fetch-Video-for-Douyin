@@ -7,6 +7,14 @@
     "service_worker": "background.js",
     "type": "module"
   },
+  "permissions": [
+    "sidePanel",
+    "contextMenus",
+    "storage",
+    "webRequest",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -21,7 +29,24 @@
   "side_panel": {
     "default_path": "sidePanel.html"
   },
-  "permissions": [
-    "sidePanel", "contextMenus", "storage"
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.douyin.com/*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "/content/index.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://*.douyin.com/*"
+      ],
+      "run_at": "document_start",
+      "css": [
+        "/content/index.css"
+      ]
+    }
   ]
 }

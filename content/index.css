@@ -1,0 +1,12 @@
+#douyin-right-container .parent-route-container div[data-e2e="user-favorite-list"] div[data-e2e="user-post-list"]>ul li {
+  position: relative;
+  z-index: 9999;
+}
+#douyin-right-container .parent-route-container div[data-e2e="user-favorite-list"] div[data-e2e="user-post-list"]>ul li::after {
+  content: "⬇️";
+  font-size: 24px;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
