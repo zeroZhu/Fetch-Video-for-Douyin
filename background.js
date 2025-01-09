@@ -1,7 +1,7 @@
 console.log('======== Fetch Video for Douyin background start ========');
 
 // 存储 debugger 连接的标记
-letdebuggerAttached = false;
+let debuggerAttached = false;
 
 // 初始化 debugger
 chrome.debugger.onDetach.addListener((source) => {
@@ -43,13 +43,13 @@ chrome.debugger.onEvent.addListener((source, method, params) => {
       { requestId: requestId },
       (response) => {
         if (response && response.body) {
-          console.log("Response body:", response.body);
+          console.log("Response:", response);
           // 在这里处理响应内容
           // 可以发送消息给 content script
-          chrome.tabs.sendMessage(source.tabId, {
-            type: 'response-data',
-            data: response.body
-          });
+          // chrome.tabs.sendMessage(source.tabId, {
+          //   type: 'response-data',
+          //   data: response.body
+          // });
         }
       }
     );
@@ -73,14 +73,14 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-  switch (info.menuItemId) {
-    case 'openSidePanel':
-      chrome.sidePanel.open({ windowId: tab.windowId });
-      break;
-    default:
-  }
-});
+// chrome.contextMenus.onClicked.addListener((info, tab) => {
+//   switch (info.menuItemId) {
+//     case 'openSidePanel':
+//       chrome.sidePanel.open({ windowId: tab.windowId });
+//       break;
+//     default:
+//   }
+// });
 
 // chrome.declarativeNetRequest.onRequest.addListener(
 //   function (request) {
@@ -100,4 +100,5 @@ chrome.webRequest.onCompleted.addListener(
     urls: ["*://*.douyin.com/aweme/v1/web/aweme/listcollection/*"]
   }
 );
+
 console.log('======== Fetch Video for Douyin background end ========');

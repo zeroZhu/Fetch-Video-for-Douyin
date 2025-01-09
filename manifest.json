@@ -12,7 +12,6 @@
     "contextMenus",
     "storage",
     "webRequest",
-    "webRequestBlocking",
     "debugger",
     "declarativeNetRequest",
     "declarativeNetRequestFeedback"
