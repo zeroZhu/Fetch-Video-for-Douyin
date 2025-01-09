@@ -12,8 +12,13 @@
     "contextMenus",
     "storage",
     "webRequest",
+    "webRequestBlocking",
+    "debugger",
     "declarativeNetRequest",
     "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "https://*.douyin.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
