@@ -25,14 +25,14 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   }
 });
 
-chrome.declarativeNetRequest.onRequest.addListener(
-  function (request) {
-    console.log('请求详情:', request);
-  },
-  {
-    urls: ["https://*.douyin.com/*"]
-  }
-);
+// chrome.declarativeNetRequest.onRequest.addListener(
+//   function (request) {
+//     console.log('请求详情:', request);
+//   },
+//   {
+//     urls: ["https://*.douyin.com/*"]
+//   }
+// );
 
 chrome.webRequest.onCompleted.addListener(
   function (details) {
