@@ -1,12 +1,13 @@
-#douyin-right-container .parent-route-container div[data-e2e="user-favorite-list"] div[data-e2e="user-post-list"]>ul li {
+/* 首页-推荐 */
+#douyin-right-container {
   position: relative;
-  z-index: 9999;
 }
-#douyin-right-container .parent-route-container div[data-e2e="user-favorite-list"] div[data-e2e="user-post-list"]>ul li::after {
-  content: "⬇️";
-  font-size: 24px;
-  color: #000;
+#douyin-right-container>.home-recommend-btn {
   position: absolute;
+  top: 10px;
   right: 10px;
-  bottom: 10px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  z-index: 9999;
 }
