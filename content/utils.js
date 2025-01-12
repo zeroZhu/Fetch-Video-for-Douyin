@@ -1,4 +1,4 @@
-async function downloadBlob(blobUrl, fileName) {
+async function downloadBlob(blobUrl, fileName = 'fetchVideoForDouyin.mp4') {
   try {
     // 获取 blob 资源
     const response = await fetch(blobUrl,{
@@ -14,7 +14,7 @@ async function downloadBlob(blobUrl, fileName) {
     const downloadUrl = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = downloadUrl;
-    link.download = fileName || 'download'; // 设置文件名
+    link.download = fileName;
     
     // 触发下载
     document.body.appendChild(link);
@@ -28,4 +28,6 @@ async function downloadBlob(blobUrl, fileName) {
   }
 }
 
-export { downloadBlob };
+window.FVFD_UTILS = {
+  downloadBlob
+}

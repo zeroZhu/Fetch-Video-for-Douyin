@@ -38,19 +38,18 @@
       "matches": [
         "https://*.douyin.com/*"
       ],
-      "run_at": "document_idle",
-      "js": [
-        "/content/index.js"
-      ]
+      "js": ["/content/index.js"],
+      "css": ["/content/index.css"]
     },
     {
-      "matches": [
-        "https://*.douyin.com/*"
-      ],
-      "run_at": "document_start",
-      "css": [
-        "/content/index.css"
-      ]
+      "matches": ["https://*.douyin.com/?recommend=1"],
+      "js": ["/content/recommend/index.js"]
+    }
+  ],
+  "web_accessible_resources":[
+    {
+      "resources":["/content/inject.js", "/content/utils.js"],
+      "matches":["https://*.douyin.com/*"]
     }
   ]
 }

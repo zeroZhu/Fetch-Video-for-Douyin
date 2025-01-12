@@ -1,13 +1,12 @@
-/* 首页-推荐 */
-#douyin-right-container {
-  position: relative;
-}
 #home-recommend-btn {
   position: absolute;
-  right: 18px;
+  right: 12px;
   bottom: 80px;
+  width: 36px;
+  height: 36px;
   border: none;
+  border-radius: 50%;
   cursor: pointer;
-  background: transparent;
+  background: #33343f;
   z-index: 9999;
 }
